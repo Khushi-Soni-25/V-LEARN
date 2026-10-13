@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login with Phone — V-LEARN</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="phone-login.css">
+</head>
+<body>
+
+  <main class="stage">
+
+    <section class="mascot" aria-label="V-LEARN mascot">
+      <div class="mascot__frame">
+        <img
+          class="mascot__image"
+          src="../../assets/fox-mascot.png"
+          alt="Vixie the fox, V-LEARN's mascot, smiling and waving hello in a purple hoodie"
+          width="420"
+          height="756"
+        >
+      </div>
+    </section>
+
+    <header class="brand">
+      <span class="brand__name">V-LEARN</span>
+      <p class="brand__tagline">Unlock your potential.</p>
+    </header>
+
+    <section class="entry" aria-labelledby="phone-heading">
+      <h1 id="phone-heading" class="entry__heading">Login with Phone</h1>
+      <p class="entry__subtext">We'll text you a one-time code to sign in.</p>
+
+      <form id="phone-form" class="phone-form" novalidate>
+        <div class="field">
+          <label for="phone" class="field__label">Mobile number</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            class="field__input"
+            placeholder="+91 98765 43210"
+            autocomplete="tel"
+            inputmode="tel"
+            required
+          >
+        </div>
+
+        <p id="form-message" class="form-message" role="alert" aria-live="polite"></p>
+
+        <button type="submit" id="request-otp-btn" class="submit-btn">Send OTP</button>
+      </form>
+    </section>
+
+    <p class="nav-link">
+      <a href="../vid-login/login.html">Use V-ID instead</a>
+    </p>
+
+    <p class="back-link">
+      <a href="../../landing/index.html">&larr; Back to landing page</a>
+    </p>
+
+  </main>
+
+  <script src="phone-login.js"></script>
+</body>
+</html>
