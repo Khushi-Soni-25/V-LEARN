@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login — V-LEARN</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+  <main class="stage">
+
+    <section class="mascot" aria-label="V-LEARN mascot">
+      <div class="mascot__frame">
+        <img
+          class="mascot__image"
+          src="../../assets/fox-mascot.png"
+          alt="Vixie the fox, V-LEARN's mascot, smiling and waving hello in a purple hoodie"
+          width="420"
+          height="756"
+        >
+      </div>
+    </section>
+
+    <header class="brand">
+      <span class="brand__name">V-LEARN</span>
+      <p class="brand__tagline">Unlock your potential.</p>
+    </header>
+
+    <section class="entry" aria-labelledby="login-heading">
+      <h1 id="login-heading" class="entry__heading">Login using V-ID</h1>
+
+      <form id="login-form" class="login-form" novalidate>
+        <div class="field">
+          <label for="v-id" class="field__label">V-ID</label>
+          <input
+            type="text"
+            id="v-id"
+            name="v_id"
+            class="field__input"
+            placeholder="Enter your V-ID"
+            autocomplete="username"
+            required
+          >
+        </div>
+
+        <div class="field">
+          <label for="password" class="field__label">Password</label>
+          <div class="field__password-wrap">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="field__input"
+              placeholder="Enter your password"
+              autocomplete="current-password"
+              required
+            >
+            <button
+              type="button"
+              id="toggle-password"
+              class="password-toggle"
+              aria-label="Show password"
+              aria-pressed="false"
+            >Show</button>
+          </div>
+        </div>
+
+        <p id="form-message" class="form-message" role="alert" aria-live="polite"></p>
+
+        <button type="submit" id="login-submit" class="login-submit">Login</button>
+
+        <a href="../phone-login/phone-login.html" class="forgot-link" id="forgot-password-link">Forgot password?</a>
+      </form>
+    </section>
+
+    <p class="back-link">
+      <a href="../../landing/index.html">&larr; Back to landing page</a>
+    </p>
+
+  </main>
+
+  <script src="login.js"></script>
+</body>
+</html>
